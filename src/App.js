@@ -3,8 +3,8 @@ import './App.css';
 const App = () => {
   const word = 'LIVERPOOL';
 
-  const handleClick = () => {
-    console.log("Clicked!")
+  const handleClick = (letter) => {
+    console.log("Clicked the", letter)
   }
 
   return (
@@ -12,7 +12,7 @@ const App = () => {
       <h1>LIVERPOOL</h1>
     <div>
       {word.split("").map((char) => {
-        return <button onClick={handleClick}>{char}</button>
+        return <button onClick={() => handleClick(char)}>{char}</button>
       })}
     </div>
      {word}
